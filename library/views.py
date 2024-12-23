@@ -1,4 +1,7 @@
+from datetime import date
+
 from django.contrib.auth.mixins import LoginRequiredMixin
+from django.http import HttpResponseRedirect
 from django.shortcuts import render, get_object_or_404
 from django.urls import reverse_lazy
 from django.views.generic import ListView, DetailView, UpdateView, CreateView, DeleteView, View
@@ -200,3 +203,18 @@ class BorrowDeleteView(LoginRequiredMixin, DeleteView):
     template_name = 'confirm_borrow_delete.html'
     success_url = reverse_lazy('borrow_list')
 
+
+
+def manage_borrows(request):
+    if not request.user.is_superuser or not request.user.is_staff:
+        return HttpResponseRedirect('/login')
+
+    borrows = Borrow.objects.all()
+    if 'end' in request.POST:
+        borrow = get_object_or_404(Borrow, id=request.POST['end'])
+        borrow.book.quantity += 1
+        borrow.book.save()
+        borrow.delete()
+
+    context = {'borrows': borrows}
+    return render(request, 'manage_borrows.html', context)

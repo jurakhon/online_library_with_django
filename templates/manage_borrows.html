@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>Manage Borrows</h2>
+<form method="post">
+    {% csrf_token %}
+    <table>
+        <tr>
+            <th>User</th><th>Book</th><th>Borrow Date</th><th>Return Date</th>
+        </tr>
+        {% for borrow in borrows %}
+        <tr>
+            <td>{{ borrow.user.username }}</td>
+            <td>{{ borrow.book.title }}</td>
+            <td>{{ borrow.borrowed_date }}</td>
+            <td>{{ borrow.return_date }}</td>
+            <td>
+                <button type="submit" name="end" value="{{ borrow.id }}">End Borrow</button>
+            </td>
+        </tr>
+        {% endfor %}
+    </table>
+</form>
+{% endblock %}

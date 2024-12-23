@@ -30,6 +30,8 @@ urlpatterns = [
     path('borrowdetail/<int:pk>/', BorrowDetailView.as_view(), name='borrow_detail'),
     path('borrowupdate/<int:pk>/', BorrowUpdateView.as_view(), name='borrow_update'),
     path('borrowdelete/<int:pk>/', BorrowDeleteView.as_view(), name='borrow_delete'),
+    path('manage_borrows/', manage_borrows, name='manage_borrows'),
+
 
 
 

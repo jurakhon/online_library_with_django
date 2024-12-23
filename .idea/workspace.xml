@@ -4,51 +4,24 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f2cdbb00-678f-4d3b-817c-83cf8b637df1" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/online_library_with_django.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/accounts/urls.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/library/urls.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/secret.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/author_create.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/author_detail.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/author_list.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/author_update.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/base.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/book_create.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/book_detail.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/book_list.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/book_update.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/borrow_create.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/borrow_detail.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/borrow_list.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/borrow_update.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/confirm_author_delete.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/confirm_book_delete.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/confirm_borrow_delete.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/confirm_genre_delete.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/confirm_publisher_delete.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/genre_create.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/genre_detail.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/genre_list.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/genre_update.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/publisher_create.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/publisher_detail.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/publisher_list.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/publisher_update.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/registration/login.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/registration/logout.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/registration/register.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/template.html" afterDir="false" />
+    <list default="true" id="f2cdbb00-678f-4d3b-817c-83cf8b637df1" name="Changes" comment="ss">
+      <change afterPath="$PROJECT_DIR$/apis/serializers.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apis/urls.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/manage_borrows.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/library/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/library/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/online_library_with_django/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/online_library_with_django/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/online_library_with_django/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/online_library_with_django/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DjangoConsoleOptions" custom-start-script="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)">
+    <option name="myCustomStartScript" value="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -60,6 +33,18 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;jurakhon&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/jurakhon/online_library_with_django.git&quot;,
+    &quot;accountId&quot;: &quot;d0344ac3-60d4-46f0-80bc-22a6bcf44f8d&quot;
+  }
+}</component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 7
 }</component>
@@ -77,7 +62,7 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
     &quot;django.template.preview.state&quot;: &quot;SHOW_EDITOR&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
     &quot;last_opened_file_path&quot;: &quot;/Users/jurakhon/PycharmProjects/online_library_with_django/templates&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
@@ -137,11 +122,25 @@
       <updated>1733251721335</updated>
       <workItem from="1733251722399" duration="745000" />
       <workItem from="1733252479574" duration="11415000" />
-      <workItem from="1734897450358" duration="1709000" />
+      <workItem from="1734897450358" duration="24255000" />
+      <workItem from="1734968611214" duration="870000" />
     </task>
+    <task id="LOCAL-00001" summary="ss">
+      <option name="closed" value="true" />
+      <created>1734957156807</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1734957156807</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="ss" />
+    <option name="LAST_COMMIT_MESSAGE" value="ss" />
   </component>
 </project>
