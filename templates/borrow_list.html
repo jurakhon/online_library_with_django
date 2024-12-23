@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block title %} Book List {% endblock %}
+
+{% block content %}
+<h3>Borrow List</h3>
+    
+{% for borrow in borrows %}
+    <p>{{ borrow.id }}</p>
+    <p>Username: {{ borrow.user }}</p>
+    <p>Book: {{ borrow.book }}</p>
+    <p>Borrow Date: {{ borrow.borrowed_date }}</p>
+    <p>Return Date: {{ borrow.return_date }}</p>
+    
+    <a href="{% url 'borrow_detail' borrow.id %}">Detail</a>
+    <a href="{% url 'borrow_update' borrow.id %}">Update</a>
+    <a href="{% url 'borrow_delete' borrow.id %}">Delete</a>
+    <hr>
+    
+{% endfor %}
+    
+{% endblock %}

@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block title %} Book List {% endblock %}
+
+{% block content %}
+<h3>Publisher List</h3>
+    
+{% for publisher in publishers %}
+    <p>{{ publisher.id }}</p>
+    <h3>{{ publisher.name }}</h3>
+    <h3>{{ publisher.address }}</h3>
+
+    
+    <a href="{% url 'publisher_detail' publisher.id %}">Detail</a>
+    <a href="{% url 'publisher_update' publisher.id %}">Update</a>
+    <a href="{% url 'publisher_delete' publisher.id %}">Delete</a>
+    <hr>
+    
+{% endfor %}
+    
+{% endblock %}

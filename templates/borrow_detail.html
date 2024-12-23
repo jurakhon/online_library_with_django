@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block title %} Book List {% endblock %}
+
+{% block content %}
+<h3>Borrow Detail</h3>
+    
+    <p>{{ borrow_detail.id }}</p>
+    <h3>{{ borrow_detail.user }}</h3>
+    <h3>{{ borrow_detail.book }}</h3>
+    <h3>{{ borrow_detail.borrowed_date }}</h3>
+    <h3>{{ borrow_detail.return_date }}</h3>
+    
+    
+    
+{% endblock %}

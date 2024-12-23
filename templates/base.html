@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+<header class="header">
+        {% block header %}
+            <div class="user-status">
+                {% if user.is_authenticated %}
+                    <p><span style="color: black">You are logged in as</span> <span class="username" style="color: orange">{{ user.username }}</span></p>
+                {% else %}
+                    <p style="color: darkred">You are not logged in</p>
+                {% endif %}
+            </div>
+            <nav class="nav-links">
+                <ul>
+                    {% if user.is_authenticated %}
+                        <li><a href="{% url 'user_logout' %}" style="padding-bottom: 10px" color="red">Logout</a></li>
+                    {% else %}
+                        <li><a href="{% url 'login' %}" style="color: red">Login</a></li>
+                        <li><a href="{% url 'register' %}" style="color: red">Register</a></li>
+                    {% endif %}
+                </ul>
+            </nav>
+        {% endblock %}
+    </header>
+
+{% block content %}
+
+{% endblock %}
+
+
+
+</body>
+</html>

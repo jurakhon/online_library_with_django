@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block title %} Book Detail {% endblock %}
+
+{% block content %}
+    
+    <p>{{ book_detail.id }}</p>
+    <h1>{{ book_detail.author }}</h1>
+    <h1>{{ book_detail.publication_date }}</h1>
+    <h1>{{ book_detail.publisher }}</h1>
+    <img src="{url '{{ book.image }}'}" alt="image">
+    <h1>{{ book_detail.genres }}</h1>
+    <h1>{{ book_detail.quantity }}</h1>
+    <h1>{{ book_detail.created_at }}</h1>
+    <h1>{{ book_detail.updated_at }}</h1>
+    <hr>
+
+{% endblock %}
