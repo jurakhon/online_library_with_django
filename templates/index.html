@@ -4,36 +4,38 @@
 
 {% block content %}
 <h1>Welcome to My Online Library!</h1>
-    <div class="mylist">
-    <a href="{% url 'manage_borrows' %}">Manage Borrows</a> |
-    <a href="{% url 'author_create' %}">Author Create</a> |
-    <a href="{% url 'author_list' %}">Author List</a> |
-    <a href="{% url 'genre_create' %}">Genre Create</a> |
-    <a href="{% url 'genre_list' %}">Genre List </a> |
-    <a href="{% url 'publisher_create' %}">Publisher Create</a> |
-    <a href="{% url 'publisher_list' %}">Publisher List</a> |
-    <a href="{% url 'book_create' %}">Book Create</a> |
-    <a href="{% url 'book_list' %}">Book List</a> |
-    <a href="{% url 'borrow_create' %}">Borrow Create</a> |
-    <a href="{% url 'borrow_list' %}">Borrow List</a> |
-</div>
+    <nav class="nav-links">
+    <a href="{% url 'manage_borrows' %}" class="nav-link">Manage Borrows</a> |
+    <a href="{% url 'author_create' %}" class="nav-link">Author Create</a> |
+    <a href="{% url 'author_list' %}" class="nav-link">Author List</a> |
+    <a href="{% url 'genre_create' %}" class="nav-link">Genre Create</a> |
+    <a href="{% url 'genre_list' %}" class="nav-link">Genre List </a> |
+    <a href="{% url 'publisher_create' %}" class="nav-link">Publisher Create</a> |
+    <a href="{% url 'publisher_list' %}" class="nav-link">Publisher List</a> |
+    <a href="{% url 'book_create' %}" class="nav-link">Book Create</a> |
+    <a href="{% url 'book_list' %}" class="nav-link">Book List</a> |
+    <a href="{% url 'borrow_create' %}" class="nav-link">Borrow Create</a> |
+    <a href="{% url 'borrow_list' %}" class="nav-link">Borrow List</a> |
+    </nav>
 
     <h2>The list of books</h2>
-    <div class="books">
+        <div class="books">
         {% for book in books %}
-        <li>Book ID: {{ book.id }}</li>
-        <li>Book Title: {{ book.title }}</li>
-        <li>Book Author: {{ book.author }}</li>
-            <img src="{{ book.image.url }}" alt="image" width="200">
-        <li>Available Copies: {{ book.quantity }}</li>
-        {% if book.quantity > 0 %}
-            <form method="get" action="{% url 'borrow_create_by_id' book.id %}"
-                  <button type="submit">Borrow</button>
+        <li class="book-item">
+            <div>Book ID: {{ book.id }}</div>
+            <div>Book Title: {{ book.title }}</div>
+            <div>Book Author: {{ book.author }}</div>
+            <img src="{{ book.image.url }}" alt="image">
+            <div>Available Copies: {{ book.quantity }}</div>
+            {% if book.quantity > 0 %}
+                <form method="get" action="{% url 'borrow_create_by_id' book.id %}">
+                    <button type="submit" class="button">Borrow</button>
+                </form>
             {% else %}
-            <li>Not Available</li>
-
-        {% endif %}
+                <div>Not Available</div>
+            {% endif %}
+        </li>
         {% endfor %}
-            </div>
+    </div>
 
 {% endblock %}
