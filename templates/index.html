@@ -27,8 +27,8 @@
             <img src="{{ book.image.url }}" alt="image" width="200">
         <li>Available Copies: {{ book.quantity }}</li>
         {% if book.quantity > 0 %}
-            <br>
-            <a href="{% url 'borrow_create_by_id' book.id %}">Borrow</a>
+            <form method="get" action="{% url 'borrow_create_by_id' book.id %}"
+                  <button type="submit">Borrow</button>
             {% else %}
             <li>Not Available</li>
 
