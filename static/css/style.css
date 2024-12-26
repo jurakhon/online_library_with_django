@@ -1,7 +1,7 @@
 body {
     font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
+    margin: 5px;
+    padding: 5px;
     background-color: #f3f3f3;
 }
 
@@ -28,7 +28,7 @@ a:hover {
 .books {
     display: flex;
     flex-wrap: wrap;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: flex-start;
 }
 
@@ -40,7 +40,7 @@ a:hover {
 }
 
 .books img {
-    width: 100%;
+    width: 200px;
     height: auto;
 }
 
