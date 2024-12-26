@@ -4,8 +4,8 @@
 
 {% block content %}
 <h1>Welcome to My Online Library!</h1>
+    <div class="mylist">
     <a href="{% url 'manage_borrows' %}">Manage Borrows</a> |
-
     <a href="{% url 'author_create' %}">Author Create</a> |
     <a href="{% url 'author_list' %}">Author List</a> |
     <a href="{% url 'genre_create' %}">Genre Create</a> |
@@ -16,7 +16,7 @@
     <a href="{% url 'book_list' %}">Book List</a> |
     <a href="{% url 'borrow_create' %}">Borrow Create</a> |
     <a href="{% url 'borrow_list' %}">Borrow List</a> |
-
+</div>
 
     <h2>The list of books</h2>
     <div class="books">
