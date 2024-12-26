@@ -44,18 +44,3 @@ a:hover {
     justify-content: space-between;
 }
 
-.button {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #008CBA; /* change background color as you like */
-    color: white;
-    text-align: center;
-    text-decoration: none;
-    cursor: pointer;
-    border: none;
-    border-radius: 4px;
-}
-
-.button:hover {
-    background-color: #007B9A; /* change the color when the button is hovered */
-}
