@@ -1,5 +1,6 @@
 from datetime import date
-
+from django.http import JsonResponse
+from django.core.cache import cache
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.http import HttpResponseRedirect
 from django.shortcuts import render, get_object_or_404
@@ -10,6 +11,24 @@ from library.models import *
 
 
 # Create your views here.
+def square_view(request):
+    number = request.GET.get('number')
+    if not number or not number.isdigit():
+        return JsonResponse({'error': 'Invalid number'}, status=400)
+
+    number = int(number)
+    cache_key = f'square-{number}'
+
+    square = cache.get(cache_key)
+    if square is not None:
+        return JsonResponse({'number':number, 'square': square, 'cached': True})
+
+    square = number ** 2
+    cache.set(cache_key, square, timeout=60 * 5)
+    return JsonResponse({'number':number, 'square': square, 'cached': False})
+
+
+
 
 class HomeView(View):
     template_name = 'index.html'
