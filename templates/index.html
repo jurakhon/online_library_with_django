@@ -18,24 +18,28 @@
     <a href="{% url 'borrow_list' %}" class="nav-link">Borrow List</a> |
     </nav>
 
-    <h2>The list of books</h2>
-        <div class="books">
-        {% for book in books %}
-        <li class="book-item">
-            <div>Book ID: {{ book.id }}</div>
-            <div>Book Title: {{ book.title }}</div>
-            <div>Book Author: {{ book.author }}</div>
-            <img src="{{ book.image.url }}" alt="image">
-            <div>Available Copies: {{ book.quantity }}</div>
+<h2>The list of books</h2>
+<div class="books">
+    {% for book in books %}
+    <div class="book-item">
+        <div class="book-info">
+            <p><strong>Book ID:</strong> {{ book.id }}</p>
+            <p><strong>Title:</strong> {{ book.title }}</p>
+            <p><strong>Author:</strong> {{ book.author }}</p>
+            <div class="book-image">
+                <img src="{{ book.image.url }}" alt="{{ book.title }}">
+            </div>
+            <p><strong>Available Copies:</strong> {{ book.quantity }}</p>
             {% if book.quantity > 0 %}
                 <form method="get" action="{% url 'borrow_create_by_id' book.id %}">
                     <button type="submit" class="button">Borrow</button>
                 </form>
             {% else %}
-                <div>Not Available</div>
+                <div class="not-available">Not Available</div>
             {% endif %}
-        </li>
-        {% endfor %}
+        </div>
     </div>
+    {% endfor %}
+</div>
 
 {% endblock %}
