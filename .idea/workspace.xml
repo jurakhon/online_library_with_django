@@ -10,7 +10,6 @@
       <change beforePath="$PROJECT_DIR$/static/images/lord_of_the_rings.jpg" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/static/images/m8kb7ah2lhy960dbp473zna11wb4.jpeg" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/static/images/ymseqoyhkyhpho50rs2jdjmi2gnn.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -251,7 +250,15 @@
       <option name="project" value="LOCAL" />
       <updated>1735340193081</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="css">
+      <option name="closed" value="true" />
+      <created>1735341042823</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1735341042823</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
