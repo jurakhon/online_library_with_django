@@ -14,7 +14,6 @@ from pathlib import Path
 from secret import database_password
 
 import os
-
 ENV = os.getenv('DJANGO_ENV', 'development')
 
 if ENV == 'development':
@@ -97,16 +96,16 @@ WSGI_APPLICATION = 'online_library_with_django.wsgi.application'
 #     }
 # }
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'online_library_with_django',
-        'USER': 'postgres',
-        'PASSWORD': database_password,
-        'HOST': '77.232.134.215',
-        'PORT': '5432'
-    }
-}
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql',
+#         'NAME': 'online_library_with_django',
+#         'USER': 'postgres',
+#         'PASSWORD': database_password,
+#         'HOST': '77.232.134.215',
+#         'PORT': '5432'
+#     }
+# }
 
 
 
@@ -146,17 +145,13 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-# STATICFILES_DIRS = [
-#    BASE_DIR / "static",
-# ]
+
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-import os
-STATIC_ROOT = os.path.join(BASE_DIR, 'static/')
 
 LOGIN_URL = '/accounts/login/'
 LOGIN_REDIRECT_URL = 'home'
