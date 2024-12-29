@@ -13,6 +13,17 @@ https://docs.djangoproject.com/en/5.1/ref/settings/
 from pathlib import Path
 from secret import database_password
 
+import os
+
+ENV = os.getenv('DJANGO_ENV', 'development')
+
+if ENV == 'development':
+    from .development_settings import *
+elif ENV == 'production':
+    from .production_settings import *
+else:
+    raise ValueError(f'Unknown DJANGO_ENV: {ENV}')
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 

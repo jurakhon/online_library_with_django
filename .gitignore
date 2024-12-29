@@ -1,3 +1,5 @@
 .venv
 secret.py
 static
+online_library_with_django/development_settings.py
+online_library_with_django/production_settings.py

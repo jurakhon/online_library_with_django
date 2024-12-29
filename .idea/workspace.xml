@@ -5,7 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f2cdbb00-678f-4d3b-817c-83cf8b637df1" name="Changes" comment="css">
+      <change afterPath="$PROJECT_DIR$/online_library_with_django/development_settings.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/online_library_with_django/production_settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/online_library_with_django/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/online_library_with_django/settings.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/static/images/hfiptkzo82hkprq8p4yfxoxb8pns.jpeg" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/static/images/lord_of_the_rings.jpg" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/static/images/m8kb7ah2lhy960dbp473zna11wb4.jpeg" beforeDir="false" />
@@ -258,7 +262,15 @@
       <option name="project" value="LOCAL" />
       <updated>1735341042823</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="css">
+      <option name="closed" value="true" />
+      <created>1735504522864</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1735504522866</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
