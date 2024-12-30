@@ -1,5 +1,5 @@
 from datetime import date
-from django.http import JsonResponse
+from django.http import JsonResponse, HttpResponse
 from django.core.cache import cache
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.http import HttpResponseRedirect
@@ -225,8 +225,11 @@ class BorrowDeleteView(LoginRequiredMixin, DeleteView):
 
 
 def manage_borrows(request):
-    if not request.user.is_superuser or not request.user.is_staff:
-        return HttpResponseRedirect('/login')
+
+    if not request.user.is_superuser:
+        return HttpResponse("You are not authorized to view this page.")
+    if not request.user.is_staff:
+            return HttpResponseRedirect('login')
 
     borrows = Borrow.objects.all()
     if 'end' in request.POST:
