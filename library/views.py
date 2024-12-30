@@ -229,7 +229,7 @@ def manage_borrows(request):
     if not request.user.is_superuser:
         return HttpResponse("You are not authorized to view this page.")
     if not request.user.is_staff:
-            return HttpResponseRedirect('login')
+            return HttpResponseRedirect('accounts/login')
 
     borrows = Borrow.objects.all()
     if 'end' in request.POST:
