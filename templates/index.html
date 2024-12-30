@@ -4,6 +4,15 @@
 
 {% block content %}
 <h1>Welcome to My Online Library!</h1>
+
+{% if messages %}
+    <ul class="messages">
+        {% for message in messages %}
+            <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+        {% endfor %}
+    </ul>
+{% endif %}
+
     <nav class="nav-links">
     <a href="{% url 'manage_borrows' %}" class="nav-link">Manage Borrows</a> |
     <a href="{% url 'author_create' %}" class="nav-link">Author Create</a> |

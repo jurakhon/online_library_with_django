@@ -1,9 +1,11 @@
 from datetime import date
+
+from django.contrib import messages
 from django.http import JsonResponse, HttpResponse
 from django.core.cache import cache
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.http import HttpResponseRedirect
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render, get_object_or_404, redirect
 from django.urls import reverse_lazy
 from django.views.generic import ListView, DetailView, UpdateView, CreateView, DeleteView, View
 from .forms import *
@@ -226,10 +228,11 @@ class BorrowDeleteView(LoginRequiredMixin, DeleteView):
 
 def manage_borrows(request):
 
-    if not request.user.is_superuser:
-        return HttpResponse("You are not authorized to view this page.")
+    # if not request.user.is_superuser:
+    #     return HttpResponse("You are not authorized to view this page.")
     if not request.user.is_staff:
-            return HttpResponseRedirect('accounts/login')
+        messages.error(request, 'You are not authorized to view this page.')
+        return redirect('login')
 
     borrows = Borrow.objects.all()
     if 'end' in request.POST:
