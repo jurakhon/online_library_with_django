@@ -22,15 +22,15 @@ class Profile(models.Model):
     def __str__(self):
         return f"{self.user.username} Profile"
 
-    # def get_absolute_url(self):
-    #     return reverse('profile-detail', kwargs={'username': self.user.username})
+    def get_absolute_url(self):
+        return reverse('profile-detail', kwargs={'username': self.user.username})
 
-@receiver(post_save, sender=User)
-def create_or_update_user_profile(sender, instance, created, **kwargs):
-    if created:
-        Profile.objects.create(user=instance)
-    else:
-        instance.profile.save()
+# @receiver(post_save, sender=User)
+# def create_or_update_user_profile(sender, instance, created, **kwargs):
+#     if created:
+#         Profile.objects.create(user=instance)
+#     else:
+#         instance.profile.save()
 
 
 class Author(models.Model):

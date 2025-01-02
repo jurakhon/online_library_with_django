@@ -3,7 +3,7 @@
 {% block title %} User Profile {% endblock %}
 
 {% block content %}
-
+{% if userprofile %}
     <h3>User Profile</h3>
 
     <h4>Username: {{ userprofile.user.username }}</h4>
@@ -14,7 +14,7 @@
     <h4>Bio: {{ userprofile.bio}}</h4>
     <img src="{{ userprofile.image.url }}" alt="image">
 
-
+{% endif %}
 
 
 {% endblock %}
