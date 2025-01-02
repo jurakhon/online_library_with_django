@@ -37,6 +37,7 @@ class HomeView(View):
 
     def get(self, request, *args, **kwargs):
         books = Book.objects.all()
+
         context = {'books': books}
 
         return render(request, self.template_name, context)
