@@ -44,7 +44,7 @@ class HomeView(View):
 
 
 
-class ProfileView(TemplateView):
+class ProfileView(LoginRequiredMixin, TemplateView):
     template_name = 'userprofile.html'
     
     def get(self, request, *args, **kwargs):
@@ -242,12 +242,6 @@ class BorrowDeleteView(LoginRequiredMixin, DeleteView):
 
 
 def manage_borrows(request):
-
-    # if not request.user.is_superuser:
-    #     return HttpResponse("You are not authorized to view this page.")
-    if not request.user.is_staff:
-        messages.error(request, 'You are not authorized to view this page.')
-        return redirect('login')
 
     borrows = Borrow.objects.all()
     if 'end' in request.POST:

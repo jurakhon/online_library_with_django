@@ -1,6 +1,7 @@
 {% extends 'base.html' %}
 
 {% block content %}
+    {% if user.is_superuser %}
 <h2>Manage Borrows</h2>
 <form method="post">
     {% csrf_token %}
@@ -21,4 +22,7 @@
         {% endfor %}
     </table>
 </form>
+        {% else %}
+        <h2>You are not authorized to manage borrows</h2>
+    {% endif %}
 {% endblock %}

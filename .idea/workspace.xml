@@ -14,6 +14,7 @@
       <change beforePath="$PROJECT_DIR$/static/images/m8kb7ah2lhy960dbp473zna11wb4.jpeg" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/static/images/ymseqoyhkyhpho50rs2jdjmi2gnn.jpeg" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/manage_borrows.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/manage_borrows.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -125,7 +126,7 @@
       <workItem from="1733252479574" duration="11415000" />
       <workItem from="1734897450358" duration="24255000" />
       <workItem from="1734968611214" duration="1674000" />
-      <workItem from="1735737922895" duration="12971000" />
+      <workItem from="1735737922895" duration="13889000" />
     </task>
     <task id="LOCAL-00001" summary="ss">
       <option name="closed" value="true" />
@@ -375,7 +376,15 @@
       <option name="project" value="LOCAL" />
       <updated>1735849176864</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary="userprofile corrections">
+      <option name="closed" value="true" />
+      <created>1735851032797</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1735851032797</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
