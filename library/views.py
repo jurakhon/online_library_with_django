@@ -1,13 +1,13 @@
 from datetime import date
 
 from django.contrib import messages
-from django.http import JsonResponse, HttpResponse
+from django.http import JsonResponse, HttpResponse, Http404
 from django.core.cache import cache
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.http import HttpResponseRedirect
 from django.shortcuts import render, get_object_or_404, redirect
 from django.urls import reverse_lazy
-from django.views.generic import ListView, DetailView, UpdateView, CreateView, DeleteView, View
+from django.views.generic import ListView, DetailView, UpdateView, CreateView, DeleteView, View, TemplateView
 from .forms import *
 from library.models import *
 
@@ -36,12 +36,26 @@ class HomeView(View):
     template_name = 'index.html'
 
     def get(self, request, *args, **kwargs):
-        """Return a list of books."""
         books = Book.objects.all()
         context = {'books': books}
 
         return render(request, self.template_name, context)
 
+
+
+class ProfileView(TemplateView):
+    template_name = 'userprofile.html'
+    
+    def get(self, request, *args, **kwargs):
+        try:
+            userprofile = get_object_or_404(Profile, user=request.user)
+
+        except Profile.DoesNotExist:
+            raise Http404(
+                "No profile found for this user.")
+        print(f"User Profile: {userprofile}")
+
+        return render(request, 'userprofile.html', {'userprofile': userprofile})
 
 
 
