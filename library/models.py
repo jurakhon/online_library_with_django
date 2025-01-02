@@ -15,8 +15,8 @@ class Profile(models.Model):
     address = models.TextField(null=True, blank=True)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
-    phone = models.CharField(max_length=15, null=True, blank=True)
-    email = models.EmailField(null=True, blank=True)
+    phone = models.CharField(max_length=15, null=True, blank=True, unique=True)
+    email = models.EmailField(null=True, blank=True, unique=True)
     bio = models.TextField(null=True, blank=True)
 
     def __str__(self):
@@ -25,12 +25,12 @@ class Profile(models.Model):
     def get_absolute_url(self):
         return reverse('profile-detail', kwargs={'username': self.user.username})
 
-# @receiver(post_save, sender=User)
-# def create_or_update_user_profile(sender, instance, created, **kwargs):
-#     if created:
-#         Profile.objects.create(user=instance)
-#     else:
-#         instance.profile.save()
+@receiver(post_save, sender=User)
+def create_or_update_user_profile(sender, instance, created, **kwargs):
+    if created:
+        Profile.objects.create(user=instance)
+    else:
+        instance.profile.save()
 
 
 class Author(models.Model):
